@@ -5,3 +5,4 @@ Telling is an example of storytelling platforms, connecting people from various 
 [Vision Statement](../../wiki/Vision%20Statement)
 
 [Requirements](../../wiki/Requirements)
+* [Iteration 1 Plan](../../wiki/Iteration-1-Plan) and [Task Board](../../projects/1)
