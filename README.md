@@ -9,8 +9,8 @@
 
 ## Team Members
 
-GitHub                                     |           Name            |        Roles
--------------------------------------------|---------------------------|-------------------
+GitHub                                     |           Name            |       
+-------------------------------------------|---------------------------|
 [kidstylex](https://github.com/kidstylex)  |  Arisa Pangpeng           |             
 [mark47546](https://github.com/mark47546)  |  Natthaphon Rakprakobkij  |              
 [KOngTNP](https://github.com/kongtnp)      |   Tanapol Buangam         |       
