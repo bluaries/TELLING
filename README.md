@@ -6,6 +6,7 @@
 
 [Requirements](../../wiki/Requirements)
 * [Iteration 1 Plan](../../wiki/Iteration-1-Plan) and [Task Board](../../projects/1)
+* Iteration 2 Plan and [Task Board](../../projects/2)
 
 ## Team Members
 
