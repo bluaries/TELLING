@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> TELLING</title>
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'Homepage/css/style.css' %}">
+
+    </head>
+
+    <body padding>
+        <h1>RECOMMENDED</h1>
+        <div class="grid-container">
+            {% for story in Stories %}
+            <div class="grid-item">
+                <h4>{{ story.title }}</h4>
+                <h6>{{ story.author }}</h6>
+            </div>    
+            {% endfor %}
+        </div>
+
+
+
+    </body>
+</html>
