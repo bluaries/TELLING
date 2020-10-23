@@ -8,3 +8,22 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'login/index.html')
+
+def user_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                if request.user.is_superuser:
+                    return redirect("admin:index")
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                return HttpResponse("Your account was inactive.")
+        else:
+            print("Failed to login.")
+            return HttpResponse("Invalid login details given")
+    else:
+        return render(request, "login/login.html", {})
