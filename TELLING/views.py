@@ -1,10 +1,9 @@
-# from django.http import HttpResponse
-
-
-# def index(request):
-#     return HttpResponse("HI!!, You're at the TELLING index.")
-
 from django.shortcuts import render
+from .models import Story
 
 def index(request):
-    return render(request, 'base.html', {})
+    queryset = Story.objects.filter()
+    context = {
+        'Stories': queryset
+    }
+    return render(request, 'index.html', context)
