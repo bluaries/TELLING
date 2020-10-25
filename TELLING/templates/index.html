@@ -1,27 +1,15 @@
+{% extends 'base.html' %}
+
+{% block method_content %}
+
+{% load static %}
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> TELLING</title>
-
-        {% load static %}
+    <head> 
         <link rel="stylesheet" type="text/css" href="{% static 'Homepage/css/style.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'Homepage/css/home.css' %}">
-
     </head>
-
-
     <body padding>
-
-        <div class="topnav">
-            
-            <a style="font-size: 22px;">Hi,</a>
-            <button class="btn default">Logout</button>
-            
-            <input type="text" placeholder="Search..">
-            
-        </div>
-
         <h1>RECOMMENDED</h1>
         <div class="grid-container">
             {% for story in Stories %}
@@ -31,8 +19,6 @@
             </div>    
             {% endfor %}
         </div>
-
-
-
     </body>
 </html>
+{% endblock method_content %}
