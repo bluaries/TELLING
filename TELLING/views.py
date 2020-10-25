@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Story
 
-
 def index(request):
     queryset = Story.objects.filter()
     context = {
