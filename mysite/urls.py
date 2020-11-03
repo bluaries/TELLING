@@ -24,4 +24,5 @@ urlpatterns = [
     path('special/', login_views.special, name='special'),
     path('login/', include('login.urls')),
     path("logout/", login_views.user_logout, name="logout"),
+    path('', include('social_django.urls', namespace='social')),
 ]
