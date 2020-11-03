@@ -149,3 +149,5 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 LOGIN_URL = '/login/user_login/'
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '556472444264-hdn1oa30q50jhg2c8j0u1vqs7v9jn233.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'ufjZg5BYzXbfIM__STPcGmKW'
