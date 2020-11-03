@@ -8,6 +8,14 @@
     {% else %}
         <h2>Register or Login if you'd like to</h2>
     {% endif %}
+    {% if user.is_authenticated %}
+      <p>Logged as {{ user.username }}</p>
+      <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+    {% else %}
+      <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+        Login
+      </a>
+    {% endif %}
   </div>
 </div>
 {% endblock %}
