@@ -11,10 +11,15 @@
 <label for="password">Password:</label>
           <input type="password" name="password" placeholder="Password">
 <input type="submit" name="" value="Login">
-<!-- log in with google -->
+<!-- log in with Google -->
 <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
   Login with Google
 </a>
+<!-- login with Facebook -->
+<a  class="btn btn-primary" href="{% url 'social:begin' 'facebook' %}">
+  Login with Facebook
+</a>
+</button>
 </form>
 </div>
   </div>
