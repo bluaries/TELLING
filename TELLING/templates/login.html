@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block method_content %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Login here :</h1>
+    <h6><a href="{% url 'login:register' %}">Or Register</a></h6>
+    <form method="post" action="{% url 'login:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <input type="submit" name="" value="Login">
+          <div>
+            <!-- log in with Google -->
+            <a href="{% url 'social:begin' 'google-oauth2' %}">by Google</a>
+          </div>
+          <div>
+            <!-- login with Facebook -->
+            <a href="{% url 'social:begin' 'facebook' %}">by Facebook</a>
+          </div>
+    </form>
+  </div>
+</div>
+{% endblock method_content %}

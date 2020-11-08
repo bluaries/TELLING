@@ -21,9 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', login_views.index, name='index'),
+    path('', include('TELLING.urls')),
     path('admin/logout/', login_views.user_logout),
-    path('special/', login_views.special, name='special'),
     path('login/', include('login.urls')),
     path("logout/", login_views.user_logout, name="logout"),
     path('', include('social_django.urls', namespace='social')),

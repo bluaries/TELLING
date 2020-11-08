@@ -5,10 +5,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
-
-def index(request):
-    return render(request, 'login/index.html', {})
-
 @login_required
 def special(request):
     return HttpResponse("You are logged in!")
@@ -40,7 +36,7 @@ def register(request):
     else:
         user_form = UserForm()
         profile_form = UserProfileInfoForm()
-    return render(request,'login/registration.html',
+    return render(request,'registration.html',
                           {'user_form':user_form,
                            'profile_form':profile_form,
                            'registered':registered})
@@ -55,12 +51,12 @@ def user_login(request):
                 login(request, user)
                 if request.user.is_superuser:
                     return redirect("admin:index")
-                return HttpResponseRedirect(reverse('index'))
+                return HttpResponseRedirect(reverse('TELLING:homepage'))
             else:
                 return HttpResponse("Your account was inactive.")
         else:
             print("Failed to login.")
             return HttpResponse("Invalid login details given")
     else:
-        return render(request, "login/login.html", {})
+        return render(request, "login.html", {})
 

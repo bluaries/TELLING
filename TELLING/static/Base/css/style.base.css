@@ -62,8 +62,13 @@ h4,
 }
 
 h5,
-.h5 {
+.h5 .dis-username{
   font-size: 1.25rem;
+}
+
+.dis-username{
+  padding-left: 20px;
+  padding-top: 5px;
 }
 
 h6,
