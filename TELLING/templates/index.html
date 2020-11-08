@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block method_content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="{% static 'Homepage/css/style.css' %}">
+    </head>
+    <body padding>
+        <p class="topic" >RECOMMENDED</p>
+            <div class="grid-container">
+                {% for story in Stories %}
+                <div class="grid-item">
+                    <img class="card" src="{{story.thumbnail.url}}">
+                            <p class="story-title">{{ story.title }}</p>
+                            <p class="story-author">{{ story.author }}</p>
+                </div>     
+                {% endfor %}
+            </div>
+    </body>
+</html>
+{% endblock method_content %}
