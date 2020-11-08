@@ -10,16 +10,16 @@
         <link rel="stylesheet" type="text/css" href="{% static 'Homepage/css/style.css' %}">
     </head>
     <body padding>
-        <h1>RECOMMENDED</h1>
-        <div class="grid-container">
-            {% for story in Stories %}
-            <div class="grid-item">
-                <h4>{{ story.title }}</h4>
-                <h6>{{ story.author }}</h6>
-                <h6><img src="{{story.thumbnail.url}}" alt="image" height="300" width="300"/></h6>
-            </div>    
-            {% endfor %}
-        </div>
+        <p class="topic" >RECOMMENDED</p>
+            <div class="grid-container">
+                {% for story in Stories %}
+                <div class="grid-item">
+                    <img class="card" src="{{story.thumbnail.url}}">
+                            <p class="story-title">{{ story.title }}</p>
+                            <p class="story-author">{{ story.author }}</p>
+                </div>     
+                {% endfor %}
+            </div>
     </body>
 </html>
 {% endblock method_content %}
