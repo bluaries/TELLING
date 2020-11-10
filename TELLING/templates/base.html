@@ -54,6 +54,14 @@
           </div>
         </nav>
       </header>
+      <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+      </div>
     </body>
    <!-- JavaScript files-->
    <script src="{% static 'Base/vendor/jquery/jquery.min.js' %}"></script>
