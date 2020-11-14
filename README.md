@@ -4,6 +4,8 @@
 ## Project Documents
 * [Vision Statement](../../wiki/Vision%20Statement)
 * [Requirements](../../wiki/Requirements)
+* [Code Review Script](../../wiki/Code%20Review%20Script)
+* [Code Review Checklist](../../wiki/Code%20Review%20Checklist)
 * [Iteration 1 Plan](../../wiki/Iteration-1-Plan) and [Task Board](../../projects/1)
 * [Iteration 2 Plan](../../wiki/Iteration-2-Plan) and [Task Board](../../projects/2)
 * [Iteration 3 Plan](../../wiki/Iteration-3-Plan) and [Task Board](../../projects/3)
