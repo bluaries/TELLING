@@ -20,7 +20,7 @@
                 {% else %}
                 <div class="text-center"><h1>Sign up</h1></div>
                 <p></p>
-                <form enctype="multipart/form-data" method="POST">
+                <!-- <form enctype="multipart/form-data" method="POST">
                   {% csrf_token %}
                   <input type="hidden" name="csrfmiddlewaretoken" value="ieHCH6aBIiiV0xdtne3ROl0cfAvnhFACz1E1pjZDBlCeURiTrCHdwKAy6uV2UYUY">
                   <p><label for="id_username">Username</label> 
@@ -30,6 +30,12 @@
                   <input type="password" class="form-control" placeholder="Enter your password" name="password" required="" id="id_password"></p>
                   <p><label for="id_email">Email address:</label>
                   <input type="email" class="form-control" placeholder="Enter your e-mail"name="email" maxlength="254" id="id_email"></p>
+                  {{ profile_form.as_p }}
+                  <button type="submit" value="Register" class="btn btn-danger btn-block">Sign up</button>
+                </form> -->
+                <form enctype="multipart/form-data" method="POST">
+                  {% csrf_token %}
+                  {{ user_form.as_p }}
                   {{ profile_form.as_p }}
                   <button type="submit" value="Register" class="btn btn-danger btn-block">Sign up</button>
                 </form>
