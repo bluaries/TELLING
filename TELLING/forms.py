@@ -4,4 +4,4 @@ from .models import Story
 class StoryForm(forms.ModelForm):
     class Meta:
         model= Story
-        fields= ["content", "author", "categories", "thumbnail"]
+        fields= ("title","content", "author", "categories", "thumbnail",)
