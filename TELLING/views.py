@@ -21,7 +21,6 @@ def create_story(request):
             story_form.save()
             img_obj = story_form.instance
             return HttpResponseRedirect(reverse('TELLING:homepage'))
-            
     else:
         story_form = StoryForm()
     return render(request, 'create_story.html', {'story_form': story_form})
