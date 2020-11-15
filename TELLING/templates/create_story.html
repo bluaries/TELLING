@@ -2,8 +2,10 @@
 
 {% block content %}
     <h2>Create new story</h2>
-    <form method="POST" class="story-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ story_form.as_p }}
+        <button type="submit">Upload</button>
     </form>
+
 {% endblock %}
