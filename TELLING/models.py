@@ -25,7 +25,7 @@ class Story(models.Model):
     date_posted = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
-    thumbnail = models.ImageField(upload_to='upload/')
+    thumbnail = models.ImageField(upload_to='images')
 
     def __str__(self):
         return self.title
