@@ -10,6 +10,8 @@
 * [Iteration 2 Plan](../../wiki/Iteration-2-Plan) and [Task Board](../../projects/2)
 * [Iteration 3 Plan](../../wiki/Iteration-3-Plan) and [Task Board](../../projects/3)
 * [Iteration 4 Plan](../../wiki/Iteration-4-Plan) and [Task Board](../../projects/4)
+* [Iteration 5 Plan](../../wiki/Iteration-5-Plan) and [Task Board](../../projects/8)
+* [Iteration 6 Plan](../../wiki/Iteration-6-Plan) and [Task Board](../../projects/9)
 
 ## Team Members
 
