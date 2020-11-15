@@ -18,17 +18,11 @@
                 <div class="text-center"><h1>Sign in</h1></div>
                 <form method="post" action="{% url 'login:user_login' %}">
                   {% csrf_token %}
-                  <label for="username">Username</label>
-                  <div>
-                    <input type="text" class="form-control" name="username" placeholder="Enter your username" >
-                  </div>
-                  <br>
-                  <label for="password">Password</label>
-                  <div>
-                    <input type="password" class="form-control" name="password" placeholder="Enter your password">
-                  </div>
-                  <br>
-                  <button type="submit" value="Login" class="btn btn-success btn-block">Sign in</button>
+                  <p></p><label for="username">Username</label>
+                  <input type="text" class="form-control" name="username" placeholder="Enter your username" >
+                  <p></p><label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                  <p></p><button type="submit" value="Login" class="btn btn-success btn-block">Sign in</button>
                   <div class="or-seperator"><i>or</i></div>
                   <div class="text-center social-btn">
                     <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger"><i class="fa fa-google"></i>&nbsp; Log in with Google</a>
