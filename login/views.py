@@ -13,7 +13,7 @@ def special(request):
 def user_logout(request):
     logout(request)
     # return HttpResponseRedirect(reverse('index'))
-    return redirect(reverse('login:user_login'))
+    return redirect(reverse('TELLING:homepage'))
 
 def register(request):
     registered = False

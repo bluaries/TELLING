@@ -62,13 +62,8 @@ h4,
 }
 
 h5,
-.h5 .dis-username{
+.h5 {
   font-size: 1.25rem;
-}
-
-.dis-username{
-  padding-left: 20px;
-  padding-top: 5px;
 }
 
 h6,
@@ -189,6 +184,7 @@ h1:hover a {
 .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
   font-family: 'Galvji';
+  font-size: x-large;
 }
 
 .navbar-brand:focus, .navbar-brand:hover {
@@ -322,7 +318,7 @@ h1:hover a {
   background-color: #c6e6ec;
 }
 
-.btn-danger {
+.custom-button .btn-danger{
   font-size: 13px;
   color: rgba(217, 83, 78, 0.75);
   letter-spacing: 1px;
@@ -333,7 +329,7 @@ h1:hover a {
   transition: all 0.3s ease 0s;
 }
 
-.btn-danger:hover {
+.custom-button .btn-danger:hover {
   color: #FFF;
   background: rgba(217, 83, 78, 0.75);
   border: 2px solid rgba(217, 83, 78, 0.75);
@@ -352,4 +348,11 @@ h1:hover a {
 ::-webkit-scrollbar-thumb{
   background:#579aff;
   border-radius: 6px;
+}
+
+.card {
+  box-shadow: 0 5px 10px rgba(61, 61, 61, 0.05), 0 15px 40px rgba(44, 44, 44, 0.2);
+  margin-bottom: 10px;
+  margin-top: 50px;
+  background-color: #ffffff;
 }

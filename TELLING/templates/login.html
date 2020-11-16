@@ -2,31 +2,39 @@
 
 {% block method_content %}
 
-<div class="container">
-  <div class="jumbotron">
-    <h1>Login here :</h1>
-    <h6><a href="{% url 'login:register' %}">Or Register</a></h6>
-    <form method="post" action="{% url 'login:user_login' %}">
-          {% csrf_token %}
-          {# A more "HTML" way of creating the login form#}
-          <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" placeholder="Username">
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="{% static 'Login/css/style.login.css' %}">
+    </head>
+    <body>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div class="card">
+              <div class="card-body">
+                <div class="text-center"><h1>Sign in</h1></div>
+                <form method="post" action="{% url 'login:user_login' %}">
+                  {% csrf_token %}
+                  <p></p><label for="username">Username</label>
+                  <input type="text" class="form-control" name="username" placeholder="Enter your username" >
+                  <p></p><label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                  <p></p><button type="submit" value="Login" class="btn btn-success btn-block">Sign in</button>
+                  <div class="or-seperator"><i>or</i></div>
+                  <div class="text-center social-btn">
+                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger"><i class="fa fa-google"></i>&nbsp; Log in with Google</a>
+                    <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-secondary"><i class="fa fa-facebook"></i>&nbsp; Log in with Facebook</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <p class="text-center text-muted small sign-up">Don't have an account? <a href="{% url 'login:register' %}">Sign up here!</a></p>
           </div>
-          <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-          <input type="submit" name="" value="Login">
-          <div>
-            <!-- log in with Google -->
-            <a href="{% url 'social:begin' 'google-oauth2' %}">by Google</a>
-          </div>
-          <div>
-            <!-- login with Facebook -->
-            <a href="{% url 'social:begin' 'facebook' %}">by Facebook</a>
-          </div>
-    </form>
-  </div>
-</div>
+        </div>
+      </div>
+    </body>
+</html>
 {% endblock method_content %}
