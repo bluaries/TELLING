@@ -26,11 +26,11 @@ Open the Terminal and use command:
 
     pip install -r requirements.txt
 
-### Step 7: Create database tables.
+### Step 3: Create database tables.
 
     python3 manage.py migrate
 
-### Step9: Run server at localhost:8000
+### Step 4: Run server at localhost:8000
 
     python3 manage.py runserver 
 
