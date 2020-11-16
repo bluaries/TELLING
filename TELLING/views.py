@@ -4,15 +4,15 @@ from .forms import StoryForm
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
+from django.views import generic
+from django.utils import timezone
 
-def index(request):
-    queryset = Story.objects.filter()
-    context = {
-        'Stories': queryset
-    }
-    return render(request, 'index.html', context)
+class IndexView(generic.ListView):
+    template_name = 'index.html'
+    context_object_name = 'latest_story'
 
-
+    def get_queryset(self):
+        return Story.objects.filter(date_posted__lte=timezone.now()).order_by('-date_posted')
 
 def create_story(request):
     if request.method == "POST":
