@@ -14,6 +14,10 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Story.objects.filter(date_posted__lte=timezone.now()).order_by('-date_posted')
 
+def story_detail(request, pk):
+    story = Story.objects.get(pk=pk)
+    return render(request, "story_detail.html", {"story": story})
+
 def create_story(request):
     if request.method == "POST":
         story_form = StoryForm(request.POST, request.FILES)
