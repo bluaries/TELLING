@@ -1,4 +1,9 @@
-# TELLING
+# TELLING 
+
+<p align="center">
+<img src="TELLING/static/Base/img/logo.png" width="150px" height="150px"></a>
+</p>
+
 **Telling** is an example of storytelling platforms, connecting people from various backgrounds. It is a website for people with ideas, knowledge, and opinions to write articles for everyone to read without needing to be friends or follow someone like today’s social network by using category cards and stories suggested on the homepage. It also has functions for writing and reading novels that are popular among teenagers. It will be a chat-style novel (click-to-read) of which the writing will be in the form of chat conversations between characters, and it will bounce up by clicking on the specified area. Readers just click on the chat screen to read what the characters are talking about. The fun and addictiveness depend on the author of the story.
 
 
