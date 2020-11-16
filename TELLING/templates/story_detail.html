@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block method_content %}
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="grid-item">
+        <p class="story-title">{{ story.title }}</p> 
+        <p class="text-muted small">by {{ story.author }} | {{story.date_posted}}</p>
+        <img src="{{story.thumbnail.url}}" alt="thumnail">
+        <p> {{ story.content }} </p>
+    </div> 
+  </div>
+</div>
+{% endblock method_content %}

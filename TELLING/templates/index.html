@@ -12,12 +12,14 @@
     <body padding>
         <p class="topic" >RECOMMENDED</p>
             <div class="grid-container">
-                {% for story in Stories %}
+                {% for story in latest_story %}
                 <div class="grid-item">
-                    <img class="card" src="{{story.thumbnail.url}}" alt="thumnail">
-                            <p class="story-title">{{ story.title }}</p>
-                            <p class="story-author">{{ story.author }}</p>
-                </div>     
+                    <a href="{% url 'TELLING:detail' story.id %}" class="card">
+                        <img class="card-img-top" src="{{story.thumbnail.url}}" alt="thumnail">
+                    </a>
+                    <p class="story-title">{{ story.title }}</p>
+                    <p class="story-author">{{ story.author }}</p>
+                </div> 
                 {% endfor %}
             </div>
     </body>
