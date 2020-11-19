@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block method_content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'Chat/css/style.chatbox.css' %}">
+    </head>
+    <body>
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://image.kpopmap.com/2020/07/enhypen-official-member-profile-SeungHoon.jpg" class="rounded-circle user_img">
+								</div>
+								<div class="user_info">
+									<span>SH.</span>
+								</div>
+							</div>
+						</div>
+						<div class="card-body msg_card_body">
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="https://image.kpopmap.com/2020/07/enhypen-official-member-profile-SeungHoon.jpg" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									hi, jake
+									<span class="msg_time">8:40 AM, Today</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									wat???
+									<span class="msg_time_send">8:55 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+							<img src="https://64.media.tumblr.com/1be15f1ac1c64efc3e375608610d6cdd/733261287b8e15c6-21/s640x960/71bd7fa08c822edd61f70adff868a0cb2f5f693e.png" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="input-group">
+								<textarea name="" class="form-control type_msg" placeholder="Type your message"></textarea>
+								<div class="input-group-append">
+									<span class="input-group-text send_btn">SEND</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+{% endblock method_content %}

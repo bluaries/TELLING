@@ -29,3 +29,6 @@ def create_story(request):
     else:
         story_form = StoryForm()
     return render(request, 'create_story.html', {'story_form': story_form})
+
+def create_chat(request):
+    return render(request, 'create_chat.html')
