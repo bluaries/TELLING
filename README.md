@@ -39,6 +39,10 @@ Open the Terminal and use command:
 
     python3 manage.py runserver 
 
+###  Step 5: Load data from data.json
+
+    python3 manage.py loaddata data.json
+
 ## Team Members
 
 GitHub                                     |           Name            |       
