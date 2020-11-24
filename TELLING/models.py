@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
+from django_resized import ResizedImageField
 
 User = get_user_model()
 
@@ -25,7 +26,7 @@ class Story(models.Model):
     date_posted = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
-    thumbnail = models.ImageField(upload_to='images')
+    thumbnail = ResizedImageField(size=[500,300], upload_to = 'image',  blank=True, null=True)
 
     def __str__(self):
         return self.title
