@@ -35,13 +35,12 @@ Open the Terminal and use command:
 
     python3 manage.py migrate
 
-### Step 4: Run server at localhost:8000
-
-    python3 manage.py runserver 
-
-###  Step 5: Load data from data.json
+### Step 4: Load data from data.json
 
     python3 manage.py loaddata data.json
+### Step 5: Run server at localhost:8000
+
+    python3 manage.py runserver 
 
 ## Team Members
 
