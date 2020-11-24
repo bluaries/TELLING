@@ -12,9 +12,14 @@ coverage==5.3
 cryptography==3.2.1
 defusedxml==0.7.0rc1
 Django==3.1
+django-environ==0.4.5
+django-resized==0.3.11
+django-tinymce==3.1.0
 flake8==3.8.4
 Flask==1.1.2
+GDAL==3.2.0
 idna==2.10
+importlib-metadata==3.1.0
 inflection==0.5.1
 itsdangerous==1.1.0
 Jinja2==2.11.2
@@ -169,3 +174,4 @@ swagger-ui-bundle==0.0.8
 toml==0.10.1
 urllib3==1.25.11
 Werkzeug==1.0.1
+zipp==3.4.0
