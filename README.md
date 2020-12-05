@@ -55,15 +55,15 @@ or
 
     pip install -r requirements.txt
 
-### Step 3: Finish env.example instruction
+### Step 6: Finish env.example instruction
 
     cat env.example
 
-### Step 4: Create database tables
+### Step 7: Create database tables
 
     python manage.py migrate
 
-### Step 5: Run server at localhost:8000
+### Step 8: Run server at localhost:8000
 
     python manage.py runserver 
 
