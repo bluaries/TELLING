@@ -25,7 +25,7 @@ class Story(models.Model):
     title = models.CharField(max_length = 100)
     content = tinymce_models.HTMLField()
     date_posted = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(Author, null=True, blank=True, on_delete=models.CASCADE, default = None)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
     thumbnail = ResizedImageField(size=[500,300], upload_to = 'image',  blank=True, null=True)
 
