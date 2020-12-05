@@ -43,6 +43,10 @@ Open the Terminal and use command:
 
     source venv/bin/activate
 
+or
+
+    .  env/bin/activate
+
 ***On Windows:***
 
     venv\Scripts\activate
