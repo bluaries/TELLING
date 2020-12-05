@@ -26,6 +26,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path("logout/", login_views.user_logout, name="logout"),
     path('', include('social_django.urls', namespace='social')),
+    path('tinymce/', include('tinymce.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
