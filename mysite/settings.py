@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['127.0.0.1','localhost','tellingapp.heroku.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'TELLING',
     'login',
     'social_django',

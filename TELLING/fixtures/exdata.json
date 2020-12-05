@@ -3,14 +3,14 @@
   "model": "TELLING.author",
   "pk": 1,
   "fields": {
-    "user": 9
+  "user": 1
   }
 },
 {
   "model": "TELLING.author",
   "pk": 2,
   "fields": {
-    "user": 7
+  "user": 2
   }
 },
 {

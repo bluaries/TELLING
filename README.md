@@ -21,26 +21,51 @@
 
 ## Getting Started
 
-### Step 1: Clone the project to your local directory.
+For Linux or MacOS use **pip3 and python3**
+
+### Step 1: Clone the project to your local directory
 
 Open the Terminal and use command:
 
     git clone https://github.com/kidstylex/TELLING.git
 
-### Step 2: Install all required packages.
+### Step 2: Go to the project directory
+
+    cd TELLING
+
+### Step 3: Create new virtual enviroment
+
+    virtualenv env
+
+### Step 4: Activate virtualenv
+
+***On MacOS and Linux:***
+
+    source venv/bin/activate
+
+or
+
+    .  env/bin/activate
+
+***On Windows:***
+
+    venv\Scripts\activate
+
+### Step 5: Install all required packages
 
     pip install -r requirements.txt
 
-### Step 3: Create database tables.
+### Step 6: Finish env.example instruction
 
-    python3 manage.py migrate
+    cat env.example
 
-### Step 4: Load data from data.json
+### Step 7: Create database tables
 
-    python3 manage.py loaddata data.json
-### Step 5: Run server at localhost:8000
+    python manage.py migrate
 
-    python3 manage.py runserver 
+### Step 8: Run server at localhost:8000
+
+    python manage.py runserver 
 
 ## Team Members
 
