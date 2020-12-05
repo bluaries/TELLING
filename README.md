@@ -21,6 +21,8 @@
 
 ## Getting Started
 
+For Linux or MacOS use **pip3 and python3**
+
 ### Step 1: Clone the project to your local directory.
 
 Open the Terminal and use command:
@@ -28,19 +30,24 @@ Open the Terminal and use command:
     git clone https://github.com/kidstylex/TELLING.git
 
 ### Step 2: Install all required packages.
+    cd TELLING
 
     pip install -r requirements.txt
 
-### Step 3: Create database tables.
+### Step 3: Finish env.example instruction
 
-    python3 manage.py migrate
+    cat env.example
 
-### Step 4: Load data from data.json
+### Step 4: Create database tables.
 
-    python3 manage.py loaddata data.json
-### Step 5: Run server at localhost:8000
+    python manage.py migrate
 
-    python3 manage.py runserver 
+### Step 5: Load data from data.json
+
+    python manage.py loaddata data.json
+### Step 6: Run server at localhost:8000
+
+    python manage.py runserver 
 
 ## Team Members
 
