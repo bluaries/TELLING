@@ -16,8 +16,8 @@ class Category(models.Model):
 class Story(models.Model):
     title = models.CharField(max_length = 100)
     date_posted = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True, related_name='author')
-    categories = models.ManyToManyField(Category)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name='author')
+    categories = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     thumbnail = ResizedImageField(size=[500,300], upload_to = 'image',  blank=True, null=True)
 
     def __str__(self):

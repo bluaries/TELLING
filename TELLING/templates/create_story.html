@@ -1,21 +1,28 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block method_content %}
+
+{% load static %}
+
 <!DOCTYPE html>
 <html>
-    <head>
+    <head> 
         {% block title %}
         <title>Telling | Create Story</title>
         {% endblock title %}
     </head>
-    <body >
-        <h2>Create new story</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ story_form.as_p }}
-        <button type="submit">Create</button>
-        <a class="" href="{% url 'TELLING:create_chapter' %}">Add new chapter</a>
-    </form>
-</html>
+    <body>
+      <div class="container">
+        <div class="jumbotron">
+            <h2>Create new story</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ story_form.as_p }}
+                <button type="submit">Create</button>
+                <a class="" href="{% url 'TELLING:create_chapter' %}">Add new chapter</a>
+            </form>
+        </div>
+      </div>
+    </body>
 
-{% endblock %}
+{% endblock method_content %}

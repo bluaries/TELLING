@@ -17,9 +17,7 @@
               <p class="story-title">{{ story.title }}</p> 
               <p class="text-muted small">by {{ story.author }} | {{story.date_posted}}</p>
               <img src="{{story.thumbnail.url}}" alt="thumnail"><p></p>
-              {% for category in story.categories.all %}
-              <p class="text-muted small">Catagories : {{category.category_name}}</p>
-              {% endfor %}
+              <p class="text-muted small">Catagories : {{story.categories}}</p>
             </div>
             <div class="col-md-6">
               <h4>Chapters</h4>

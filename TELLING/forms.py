@@ -6,6 +6,11 @@ class StoryForm(forms.ModelForm):
     class Meta:
         model= Story
         fields= ("title", "categories", "thumbnail",)
+        widgets= {
+            'title':forms.TextInput(attrs={
+            'class': 'form-control', 'style':'width:80%',
+            'placeholder': 'Write your title here'})
+        }
     
 
 class ChapterForm(forms.ModelForm):

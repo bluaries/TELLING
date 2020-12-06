@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Story, Chapter
+from .models import Story, Chapter, Category
 from .forms import StoryForm, ChapterForm
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect, HttpResponse
@@ -69,3 +69,6 @@ def edit_story(request, pk):
     else:
         update_story_form = StoryForm(instance=this_story)
         return render(request, 'edit_story.html', {'update_story_form': update_story_form})
+
+# class StoryDelete(generic.View):
+#     model = Story
