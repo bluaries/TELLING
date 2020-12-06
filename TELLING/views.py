@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Story
+from .models import Story, Chapter
 from .forms import StoryForm, ChapterForm
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect, HttpResponse
@@ -22,7 +22,11 @@ def show_user_story(request):
 
 def story_detail(request, pk):
     story = Story.objects.get(pk=pk)
-    return render(request, "story_detail.html", {"story": story})
+    return render(request, ["story_detail.html","chapter.html"], {"story": story})
+
+def chapter_detail(request, pk):
+    chapter = Chapter.objects.get()
+    return render(request, "chapter.html", {"chapter": chapter})
 
 def created_updated(model, request):
         obj = model.objects.latest('pk')
@@ -46,7 +50,7 @@ def create_story(request):
 @login_required
 def create_new_chapter(request):
     if request.method == "POST":
-        chapter_form = ChapterForm(request.POST, request.FILES)
+        chapter_form = ChapterForm(request.POST, instance = chapter_story.title)
         if chapter_form.is_valid():
             chapter_form.save()
             return HttpResponseRedirect(reverse('TELLING:homepage'))

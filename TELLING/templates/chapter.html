@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block method_content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="{% static 'Story/css/style.story.css' %}">
+    </head>
+    <body>
+      <div class="container">
+        <div class="jumbotron">
+            <p class="chap-title-big" >{{ chapter.title_chapter}}</p>
+            <div class="seperator"></div>
+            <div class="content-box">
+                {{ chapter.content|safe }}
+            </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="{% url 'TELLING:homepage' %}">Home</a></li>
+                  <li class="breadcrumb-item">{{chapter.story}} : {{ chapter.title_chapter}}</a></li>
+                </ol>
+            </nav>
+        </div>
+      </div>
+    </body>
+
+{% endblock method_content %}

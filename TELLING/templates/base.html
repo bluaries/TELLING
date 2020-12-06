@@ -6,13 +6,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% block title %}
   <title>Telling</title>
+  {% endblock title %}
   <link rel="stylesheet" type="text/css" href="{% static 'Base/vendor/bootstrap/css/bootstrap.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'Base/css/fontastic.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'Base/css/style.base.css' %}" id="theme-stylesheet">
-  <link rel="icon" href="{% static 'Base/img/logo.png' %}">
-
+  <link rel="icon" href="/TELLING/{% static 'Base/css/img/logo.png' %}">
+  
 </head>
 
 <body>
@@ -46,7 +48,7 @@
       <div class="container">
         <!-- Navbar Brand -->
         <div class="navbar-header d-flex align-items-center justify-content-between">
-          <!-- Navbar Brand --><a href="{% url 'TELLING:homepage' %}" class="navbar-brand"><img src="static/Base/img/logo.png" width="30" height="30" alt="" loading="lazy">  TELLING</a>
+          <!-- Navbar Brand --><a href="{% url 'TELLING:homepage' %}" class="navbar-brand"><img src="/static/Base/img/logo.png" width="30" height="30" alt="" loading="lazy">  TELLING</a>
         </div>
         <!-- Navbar Menu -->
         <div id="navbarcollapse" class="collapse navbar-collapse">
@@ -60,6 +62,7 @@
                 hi, {{ user.username }}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'TELLING:show_story' %}">My story</a>
                 <a class="dropdown-item" href="{% url 'TELLING:create_story' %}">Create story</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
