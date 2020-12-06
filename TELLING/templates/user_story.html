@@ -17,7 +17,7 @@
                     <a href="{% url 'TELLING:detail' story.id %}" class="card">
                         <img class="card-img-top" src="{{story.thumbnail.url}}" alt="thumnail">
                     </a>
-                    <p class="story-title">{{ story.title }}</p>
+                    <p class="story-title">{{ story.title }} -  <a class="" href="{% url 'TELLING:edit_story' story.id %}">edit</a></p>
                     <p class="story-author">{{ story.author }}</p>
                 </div> 
                 {% endfor %}

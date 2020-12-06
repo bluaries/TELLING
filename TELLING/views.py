@@ -24,12 +24,12 @@ def story_detail(request, pk):
     story = Story.objects.get(pk=pk)
     return render(request, "story_detail.html", {"story": story})
 
-@login_required
 def created_updated(model, request):
         obj = model.objects.latest('pk')
         if obj.author is None:
             obj.author = request.user
             obj.save()
+
 @login_required
 def create_story(request):
     if request.method == "POST":
@@ -53,3 +53,15 @@ def create_new_chapter(request):
     else:
         chapter_form = ChapterForm()
     return render(request, 'create_chapter.html', {'chapter_form': chapter_form})
+
+@login_required
+def edit_story(request, pk):
+    this_story = Story.objects.get(pk=pk)
+    if(request.method == "POST"):
+        update_story_form = StoryForm(request.POST, instance=this_story)
+        if update_story_form.is_valid():
+            this_story.save()
+            return HttpResponseRedirect(reverse('TELLING:homepage'))
+    else:
+        update_story_form = StoryForm(instance=this_story)
+        return render(request, 'edit_story.html', {'update_story_form': update_story_form})
