@@ -4,3 +4,5 @@ python-decouple==3.3
 social-auth-app-django==4.0.0
 Pillow==7.1.1
 django-tinymce
+gunicorn
+django-heroku
