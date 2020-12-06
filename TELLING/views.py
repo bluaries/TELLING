@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 class IndexView(generic.ListView):
     template_name = 'index.html'
@@ -14,16 +15,22 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Story.objects.filter(date_posted__lte=timezone.now()).order_by('-date_posted')
 
+@login_required
+def show_user_story(request):
+    user_stories = Story.objects.filter(author=request.user)
+    return render(request, 'user_story.html', {'user_stories': user_stories})
+
 def story_detail(request, pk):
     story = Story.objects.get(pk=pk)
     return render(request, "story_detail.html", {"story": story})
 
+@login_required
 def created_updated(model, request):
         obj = model.objects.latest('pk')
         if obj.author is None:
             obj.author = request.user
             obj.save()
-
+@login_required
 def create_story(request):
     if request.method == "POST":
         story_form = StoryForm(request.POST, request.FILES)
@@ -36,6 +43,7 @@ def create_story(request):
         story_form = StoryForm()
     return render(request, 'create_story.html', {'story_form': story_form})
 
+@login_required
 def create_new_chapter(request):
     if request.method == "POST":
         chapter_form = ChapterForm(request.POST, request.FILES)
