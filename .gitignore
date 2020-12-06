@@ -133,3 +133,6 @@ dmypy.json
 
 #environ
 .env
+
+staticfiles
+*.pyc

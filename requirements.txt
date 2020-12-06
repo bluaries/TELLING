@@ -6,3 +6,4 @@ Pillow==7.1.1
 django-tinymce
 gunicorn
 django-heroku
+whitenoise=5.2.0

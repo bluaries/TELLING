@@ -1,0 +1,1 @@
+web: gunicorn TELLING.wsgi --log-file -
