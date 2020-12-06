@@ -19,7 +19,6 @@
                 {% csrf_token %}
                 {{ story_form.as_p }}
                 <button type="submit">Create</button>
-                <a class="" href="{% url 'TELLING:create_chapter' %}">Add new chapter</a>
             </form>
         </div>
       </div>

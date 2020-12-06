@@ -187,4 +187,3 @@ DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 TINYMCE_JS_URL = os.path.join(MEDIA_URL, "path/to/tiny_mce/tiny_mce.js")
 
-

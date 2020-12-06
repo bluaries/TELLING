@@ -50,9 +50,10 @@ def create_story(request):
 @login_required
 def create_new_chapter(request):
     if request.method == "POST":
-        chapter_form = ChapterForm(request.POST, instance = chapter_story.title)
+        chapter_form = ChapterForm(request.POST, request.FILES)
         if chapter_form.is_valid():
             chapter_form.save()
+            img_obj = story_form.instance
             return HttpResponseRedirect(reverse('TELLING:homepage'))
     else:
         chapter_form = ChapterForm()
