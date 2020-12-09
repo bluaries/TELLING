@@ -13,7 +13,7 @@ class StoryForm(forms.ModelForm):
         }
     
 class ChapterForm(forms.ModelForm):
-    content = forms.CharField(widget=TinyMCE(mce_attrs={'width': 800}))
+    content = forms.CharField(widget=TinyMCE(mce_attrs={'width': 800, 'height':800}))
     class Meta:
         model= Chapter
         fields= ("story", "title_chapter", "content",)

@@ -2,12 +2,11 @@
 
 {% block method_content %}
 
-{% load static %}
-
 <!DOCTYPE html>
 <html>
     <head> 
-        <link rel="stylesheet" type="text/css" href="{% static 'Login/css/style.login.css' %}">
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'Login/css/style.login.css' %}">
     </head>
     <body>
       <div class="container">

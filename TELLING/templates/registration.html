@@ -2,11 +2,10 @@
 
 {% block method_content %}
 
-{% load static %}
-
 <!DOCTYPE html>
 <html>
     <head> 
+      {% load static %}
       <link rel="stylesheet" type="text/css" href="{% static 'Register/css/style.regis.css' %}">
     </head>
     <body>
@@ -20,19 +19,6 @@
                 {% else %}
                 <div class="text-center"><h1>Sign up</h1></div>
                 <p></p>
-                <!-- <form enctype="multipart/form-data" method="POST">
-                  {% csrf_token %}
-                  <input type="hidden" name="csrfmiddlewaretoken" value="ieHCH6aBIiiV0xdtne3ROl0cfAvnhFACz1E1pjZDBlCeURiTrCHdwKAy6uV2UYUY">
-                  <p><label for="id_username">Username</label> 
-                  <input type="text" class="form-control" placeholder="Enter your username" name="username" maxlength="150" required="" id="id_username"> 
-                  <span class="helptext text-muted small">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
-                  <p><label for="id_password">Password</label>
-                  <input type="password" class="form-control" placeholder="Enter your password" name="password" required="" id="id_password"></p>
-                  <p><label for="id_email">Email address:</label>
-                  <input type="email" class="form-control" placeholder="Enter your e-mail"name="email" maxlength="254" id="id_email"></p>
-                  {{ profile_form.as_p }}
-                  <button type="submit" value="Register" class="btn btn-danger btn-block">Sign up</button>
-                </form> -->
                 <form enctype="multipart/form-data" method="POST">
                   {% csrf_token %}
                   {{ user_form.as_p }}

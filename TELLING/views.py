@@ -22,10 +22,10 @@ def show_user_story(request):
 
 def story_detail(request, pk):
     story = Story.objects.get(pk=pk)
-    return render(request, ["story_detail.html","chapter.html"], {"story": story})
+    return render(request, "story_detail.html", {"story": story})
 
 def chapter_detail(request, pk):
-    chapter = Chapter.objects.get()
+    chapter = Chapter.objects.get(pk=pk)
     return render(request, "chapter.html", {"chapter": chapter})
 
 def created_updated(model, request):
@@ -53,7 +53,6 @@ def create_new_chapter(request):
         chapter_form = ChapterForm(request.POST, request.FILES)
         if chapter_form.is_valid():
             chapter_form.save()
-            img_obj = story_form.instance
             return HttpResponseRedirect(reverse('TELLING:homepage'))
     else:
         chapter_form = ChapterForm()

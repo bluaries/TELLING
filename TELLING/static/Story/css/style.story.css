@@ -20,7 +20,10 @@
 .content-box {
     margin-top: 40px;
     margin-bottom: 40px;
-    padding: 70px;
-    height: 400px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.jumbotron{
     background-color: rgb(255, 255, 255);
 }

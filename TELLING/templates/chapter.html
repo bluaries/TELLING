@@ -2,21 +2,18 @@
 
 {% block method_content %}
 
-{% load static %}
-
 <!DOCTYPE html>
 <html>
-    <head> 
-        <link rel="stylesheet" type="text/css" href="{% static 'Story/css/style.story.css' %}">
+    <head>
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'Story/css/style.story.css' %}">
     </head>
     <body>
       <div class="container">
         <div class="jumbotron">
             <p class="chap-title-big" >{{ chapter.title_chapter}}</p>
             <div class="seperator"></div>
-            <div class="content-box">
-                {{ chapter.content|safe }}
-            </div>
+            <div class="content-box">{{ chapter.content|safe }}</div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="{% url 'TELLING:homepage' %}">Home</a></li>
@@ -26,5 +23,5 @@
         </div>
       </div>
     </body>
-
+</html>
 {% endblock method_content %}
