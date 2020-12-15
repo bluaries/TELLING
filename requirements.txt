@@ -28,3 +28,5 @@ sqlparse==0.4.1
 urllib3==1.26.2
 whitenoise==3.3.1
 yarg==0.1.9
+django-resized
+django-tinymce
