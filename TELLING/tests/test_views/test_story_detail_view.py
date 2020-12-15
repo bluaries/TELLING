@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from TELLING.models import Story
 
 
 class StoryDetailTest(TestCase):
@@ -8,7 +9,9 @@ class StoryDetailTest(TestCase):
         Test that a view can be access using url name
         """
         url = reverse('TELLING:detail')
-        response = self.client.post(url, data={'story': 1})
+
+        story = Story.objects.get(1)
+        response = self.client.post(url, data={'story': story})
         self.assertEqual(response.status_code, 200)
 
     def test_view_uses_correct_template(self):
@@ -16,5 +19,6 @@ class StoryDetailTest(TestCase):
         Test that a view renders `story_detail.html`
         """
         url = reverse('TELLING:detail')
-        response = self.client.post(url, data={'story': 1})
-        self.assertTemplateUsed(response, 'TELLING/story_detail.html')
+        story = Story.objects.get(1)
+        response = self.client.post(url, data={'story': story})
+        self.assertTemplateUsed(response, 'story_detail.html')

@@ -17,4 +17,4 @@ class IndexTest(TestCase):
         """
         url = reverse('TELLING:homepage')
         response = self.client.get(url)
-        self.assertTemplateUsed(response, 'TELLING/index.html')
+        self.assertTemplateUsed(response, 'index.html')

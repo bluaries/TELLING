@@ -17,4 +17,4 @@ class CreateStoryTest(TestCase):
         """
         url = reverse('TELLING:create_story')
         response = self.client.get(url)
-        self.assertTemplateUsed(response, 'quizer_game/create_story.html')
+        self.assertTemplateUsed(response, 'create_story.html')
