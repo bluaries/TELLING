@@ -1,11 +1,10 @@
 from django.test import TestCase
 from django.urls import reverse
 from TELLING.models import Story, Category
-from TELLING.forms import StoryForm
 from django.contrib.auth.models import User
 
 
-class CreateStoryTest(TestCase):
+class ShowUserStoryTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user("User 1", password="pws")
         category = Category.objects.create(category_name="Category 1")
@@ -18,23 +17,20 @@ class CreateStoryTest(TestCase):
         """
         Test that a view can be access using url name
         """
+        url = reverse('TELLING:show_story')
         self.client.force_login(self.user)
-        url = reverse('TELLING:create_story')
-        response = self.client.get(url, data={'story_form': StoryForm()})
+
+        stories = Story.objects.filter(author=self.user)
+        response = self.client.get(url, data={'user_stories': stories})
         self.assertEqual(response.status_code, 200)
 
     def test_view_uses_correct_template(self):
         """
-        Test that a view renders `create_story.html`
+        Test that a view renders `user_story.html`
         """
+        url = reverse('TELLING:show_story')
         self.client.force_login(self.user)
-        url = reverse('TELLING:create_story')
-        response = self.client.get(url, data={'story_form': StoryForm()})
-        self.assertTemplateUsed(response, 'create_story.html')
 
-    # def test_redirect_to_homepage(self):
-    #     self.client.force_login(self.user)
-    #     url = reverse('TELLING:create_story')
-    #     url_redirect = reverse('TELLING:homepage')
-    #     response = self.client.post(url, data={'story_form': StoryForm()}, follow=True)
-    #     self.assertRedirects(response, url_redirect, status_code=302)
+        stories = Story.objects.filter(author=self.user)
+        response = self.client.post(url, data={'user_stories': stories})
+        self.assertTemplateUsed(response, 'user_story.html')
