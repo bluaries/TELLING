@@ -19,7 +19,7 @@
         <a class="" href="{% url 'TELLING:create_chapter' story.id %}">Add new chapter</a>
         {% for chapter in story.chapter_set.all %}
             <li>
-                <a class="" href="{% url 'TELLING:chapter' chapter.id %}">{{ chapter.title_chapter}}</a>
+                <a class="" href="{% url 'TELLING:edit_chapter' chapter.id %}">{{ chapter.title_chapter}}</a></p>
             </li>
         {% endfor %}
 

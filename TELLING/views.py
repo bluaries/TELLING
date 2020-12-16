@@ -63,7 +63,7 @@ def edit_story(request, pk):
 def create_new_chapter(request, pk):
     add_to_story = Story.objects.get(pk=pk)
     if request.method == "POST":
-        chapter_form = ChapterForm(request.POST, request.FILES, user=request.user)
+        chapter_form = ChapterForm(request.POST, user=request.user)
         if chapter_form.is_valid():
             chapter_form.save()
             return HttpResponseRedirect(reverse('TELLING:homepage'))
@@ -71,14 +71,16 @@ def create_new_chapter(request, pk):
         chapter_form = ChapterForm(user=request.user)
     return render(request, 'create_chapter.html', {'chapter_form': chapter_form, 'story': add_to_story})
 
-# @login_required
-# def edit_chapter(request):
-#     if request.method == "POST":
-#         chapter_form = ChapterForm(request.POST, request.FILES)
-#         if chapter_form.is_valid():
-#             chapter_form.save()
-#             return HttpResponseRedirect(reverse('TELLING:homepage'))
-#     else:
-#         chapter_form = ChapterForm()
-#     return render(request, 'create_chapter.html', {'chapter_form': chapter_form})
+@login_required
+def edit_chapter(request, pk):
+    this_chap = Chapter.objects.get(pk=pk)
+    if request.method == "POST":
+        update_chapter_form = ChapterForm(request.POST, instance=this_chap)
+        if update_chapter_form.is_valid():
+            this_chap.save()
+            return HttpResponseRedirect(reverse('TELLING:homepage'))
+    else:
+        update_chapter_form = ChapterForm(instance=this_chap)
+    return render(request, 'edit_chapter.html', {'update_chapter_form': update_chapter_form, 'chapter': this_chap})
+
 
