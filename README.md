@@ -63,7 +63,11 @@ or
 
     python manage.py migrate
 
-### Step 8: Run server at localhost:8000
+### Step 8: Load data from data.json
+
+    python manage.py loaddata data.json
+    
+### Step 9: Run server at localhost:8000
 
     python manage.py runserver 
 
