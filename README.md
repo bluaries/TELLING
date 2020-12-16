@@ -1,4 +1,4 @@
-# TELLING 
+# TELLING [![Build Status](https://travis-ci.org/kidstylex/TELLING.svg?branch=master)](https://travis-ci.org/kidstylex/TELLING) [![codecov](https://codecov.io/gh/kidstylex/TELLING/branch/master/graph/badge.svg?token=N8G4IBXGE0)](https://codecov.io/gh/kidstylex/TELLING)
 
 <p align="center">
 <img src="TELLING/static/Base/img/logo.png" width="150px" height="150px"></a>
