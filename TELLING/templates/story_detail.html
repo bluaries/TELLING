@@ -2,14 +2,33 @@
 
 {% block method_content %}
 
-<div class="container">
-  <div class="jumbotron">
-    <div class="grid-item">
-        <p class="story-title">{{ story.title }}</p> 
-        <p class="text-muted small">by {{ story.author }} | {{story.date_posted}}</p>
-        <img src="{{story.thumbnail.url}}" alt="thumnail">
-        <p> {{ story.content|safe }} </p>
-    </div> 
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+    <head> 
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'Story/css/style.story.css' %}">
+    </head>
+    <body>
+      <div class="container">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="story-title">{{ story.title }}</p> 
+              <p class="text-muted small">by {{ story.author }} | {{story.date_posted}}</p>
+              <img src="{{story.thumbnail.url}}" alt="thumnail"><p></p>
+              <p class="text-muted small">Catagories : {{story.categories}}</p>
+            </div>
+            <div class="col-md-6">
+              <h4>Chapters</h4>
+              {% for chapter in story.chapter_set.all %}
+              <li>
+                <a class="" href="{% url 'TELLING:chapter' chapter.id %}">{{ chapter.title_chapter}}</a>
+              </li>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
 {% endblock method_content %}

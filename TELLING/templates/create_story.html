@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h2>Create new story</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ story_form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
+{% block method_content %}
 
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head> 
+      {% load static %}
+      {% block title %}
+      <title>Telling | Create Story</title>
+      {% endblock title %}
+    </head>
+    <body>
+      <div class="container">
+        <div class="jumbotron">
+            <h2>Create new story</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ story_form.as_p }}
+                <button type="submit">Create</button>
+            </form>
+        </div>
+      </div>
+    </body>
+
+{% endblock method_content %}

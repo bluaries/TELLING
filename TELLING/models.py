@@ -4,14 +4,6 @@ from django.contrib.auth.models import User
 from django_resized import ResizedImageField
 from tinymce import models as tinymce_models
 
-User = get_user_model()
-
-class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.username
-    
 class Category(models.Model):
     category_name = models.CharField(max_length = 50)
 
@@ -23,14 +15,20 @@ class Category(models.Model):
 
 class Story(models.Model):
     title = models.CharField(max_length = 100)
-    content = tinymce_models.HTMLField()
     date_posted = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    categories = models.ManyToManyField(Category)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name='author')
+    categories = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     thumbnail = ResizedImageField(size=[500,300], upload_to = 'image',  blank=True, null=True)
 
     def __str__(self):
         return self.title
-
     class Meta:
         verbose_name_plural = "Stories"
+        
+class Chapter(models.Model):
+    story = models.ForeignKey(Story, on_delete=models.CASCADE)
+    title_chapter = models.CharField(max_length = 100)
+    content = tinymce_models.HTMLField()
+    def __str__(self):
+        return self.title_chapter
+
