@@ -14,7 +14,15 @@
         {% csrf_token %}
         {{ update_story_form.as_p }}
         <button type="submit">Create</button>
-        <a class="" href="{% url 'TELLING:create_chapter' %}">Add new chapter</a>
+        <p></p>
+        <h4>Chapters</h4>
+        <a class="" href="{% url 'TELLING:create_chapter' story.id %}">Add new chapter</a>
+        {% for chapter in story.chapter_set.all %}
+            <li>
+                <a class="" href="{% url 'TELLING:chapter' chapter.id %}">{{ chapter.title_chapter}}</a>
+            </li>
+        {% endfor %}
+
     </form>
 </html>
 

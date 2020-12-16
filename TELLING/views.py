@@ -48,25 +48,37 @@ def create_story(request):
     return render(request, 'create_story.html', {'story_form': story_form})
 
 @login_required
-def create_new_chapter(request):
-    if request.method == "POST":
-        chapter_form = ChapterForm(request.POST, request.FILES)
-        if chapter_form.is_valid():
-            chapter_form.save()
-            return HttpResponseRedirect(reverse('TELLING:homepage'))
-    else:
-        chapter_form = ChapterForm()
-    return render(request, 'create_chapter.html', {'chapter_form': chapter_form})
-
-@login_required
 def edit_story(request, pk):
     this_story = Story.objects.get(pk=pk)
-    if(request.method == "POST"):
+    if request.method == "POST":
         update_story_form = StoryForm(request.POST, instance=this_story)
         if update_story_form.is_valid():
             this_story.save()
             return HttpResponseRedirect(reverse('TELLING:homepage'))
     else:
         update_story_form = StoryForm(instance=this_story)
-        return render(request, 'edit_story.html', {'update_story_form': update_story_form})
+        return render(request, 'edit_story.html', {'update_story_form': update_story_form, 'story': this_story})
+
+@login_required
+def create_new_chapter(request, pk):
+    add_to_story = Story.objects.get(pk=pk)
+    if request.method == "POST":
+        chapter_form = ChapterForm(request.POST, request.FILES, user=request.user)
+        if chapter_form.is_valid():
+            chapter_form.save()
+            return HttpResponseRedirect(reverse('TELLING:homepage'))
+    else:
+        chapter_form = ChapterForm(user=request.user)
+    return render(request, 'create_chapter.html', {'chapter_form': chapter_form, 'story': add_to_story})
+
+# @login_required
+# def edit_chapter(request):
+#     if request.method == "POST":
+#         chapter_form = ChapterForm(request.POST, request.FILES)
+#         if chapter_form.is_valid():
+#             chapter_form.save()
+#             return HttpResponseRedirect(reverse('TELLING:homepage'))
+#     else:
+#         chapter_form = ChapterForm()
+#     return render(request, 'create_chapter.html', {'chapter_form': chapter_form})
 

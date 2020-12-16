@@ -17,3 +17,9 @@ class ChapterForm(forms.ModelForm):
     class Meta:
         model= Chapter
         fields= ("story", "title_chapter", "content",)
+
+    def __init__(self, *args, user=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        if user:
+            story = self.fields['story']
+            story.queryset = story.queryset.filter(author=user)
