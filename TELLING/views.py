@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Story, Chapter
+from .models import Story, Chapter, Category
 from .forms import StoryForm, ChapterForm
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect, HttpResponse
@@ -7,13 +7,15 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
-class IndexView(generic.ListView):
-    template_name = 'index.html'
-    context_object_name = 'latest_story'
-
-    def get_queryset(self):
-        return Story.objects.filter(date_posted__lte=timezone.now()).order_by('-date_posted')
+def index(request):
+    search_stories = request.GET.get('search')
+    if search_stories:
+        stories = Story.objects.filter(Q(categories__category_name__icontains=search_stories) | Q(title__icontains=search_stories))
+    else:
+        stories = Story.objects.filter(date_posted__lte=timezone.now()).order_by('-date_posted')
+    return render(request, 'index.html', {'stories': stories})
 
 @login_required
 def show_user_story(request):
