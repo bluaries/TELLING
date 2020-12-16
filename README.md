@@ -65,7 +65,7 @@ or
 
 ### Step 8: Load data from data.json
 
-    python3 manage.py loaddata data.json
+    python manage.py loaddata data.json
     
 ### Step 9: Run server at localhost:8000
 
