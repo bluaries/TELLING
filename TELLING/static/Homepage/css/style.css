@@ -55,3 +55,8 @@ a.card:hover {
   font-weight: bold;
   color: rgb(39, 39, 38);
 }
+
+.show-user {
+  font-size: 30px;
+  padding: 20px;
+}

@@ -29,6 +29,7 @@ class Chapter(models.Model):
     story = models.ForeignKey(Story, on_delete=models.CASCADE)
     title_chapter = models.CharField(max_length = 100)
     content = tinymce_models.HTMLField()
+
     def __str__(self):
         return self.title_chapter
 

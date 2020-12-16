@@ -1,5 +1,23 @@
 [
 {
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+      "password": "pbkdf2_sha256$216000$ZazBnxKYy8vL$8CtujRA5X/XM1V6ZC1f++0/xXmTEOmdS1u8ccJlT8Ho=",
+      "last_login": "2020-12-09T08:33:22.846Z",
+      "is_superuser": false,
+      "username": "all_shakes",
+      "first_name": "",
+      "last_name": "",
+      "email": "chilizhiki@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-12-09T07:56:31.104Z",
+      "groups": [],
+      "user_permissions": []
+  }
+},
+{
   "model": "TELLING.category",
   "pk": 1,
   "fields": {
@@ -33,7 +51,7 @@
   "fields": {
     "title": "Shakespeare Sonnets",
     "date_posted": "2020-12-09T08:04:53.440Z",
-    "author": 2,
+    "author": 1,
     "categories": 1,
     "thumbnail": "image/Sonnets1609titlepage_SSJMJjc.jpg"
   }
