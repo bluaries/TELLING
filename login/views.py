@@ -57,7 +57,7 @@ def user_login(request):
                 return HttpResponse("Your account was inactive.")
         else:
             print("Failed to login.")
-            return HttpResponse("Invalid login details given")
+            return HttpResponseRedirect(reverse('login:register'))
     else:
         return render(request, "login.html", {})
 
