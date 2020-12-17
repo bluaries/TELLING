@@ -18,6 +18,8 @@
 * [Iteration 4 Plan](../../wiki/Iteration-4-Plan) and [Task Board](../../projects/4)
 * [Iteration 5 Plan](../../wiki/Iteration-5-Plan) and [Task Board](../../projects/8)
 * [Iteration 6 Plan](../../wiki/Iteration-6-Plan) and [Task Board](../../projects/10)
+* [Iteration 7 Plan](../../wiki/Iteration-5-Plan) and [Task Board](../../projects/11)
+* [Iteration 8 Plan](../../wiki/Iteration-6-Plan) and [Task Board](../../projects/12)
 
 ## Getting Started
 
