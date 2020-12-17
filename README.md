@@ -1,4 +1,4 @@
-# TELLING 
+# TELLING [![Build Status](https://www.travis-ci.com/kidstylex/TELLING.svg?branch=master)](https://www.travis-ci.com/kidstylex/TELLING) [![codecov](https://codecov.io/gh/kidstylex/TELLING/branch/master/graph/badge.svg?token=N8G4IBXGE0)](https://codecov.io/gh/kidstylex/TELLING) 
 
 <p align="center">
 <img src="TELLING/static/Base/img/logo.png" width="150px" height="150px"></a>
@@ -18,8 +18,8 @@
 * [Iteration 4 Plan](../../wiki/Iteration-4-Plan) and [Task Board](../../projects/4)
 * [Iteration 5 Plan](../../wiki/Iteration-5-Plan) and [Task Board](../../projects/8)
 * [Iteration 6 Plan](../../wiki/Iteration-6-Plan) and [Task Board](../../projects/10)
-* [Iteration 7 Plan](../../wiki/Iteration-5-Plan) and [Task Board](../../projects/11)
-* [Iteration 8 Plan](../../wiki/Iteration-6-Plan) and [Task Board](../../projects/12)
+* [Iteration 7 Plan](../../wiki/Iteration-7-Plan) and [Task Board](../../projects/11)
+* [Iteration 8 Plan](../../wiki/Iteration-8-Plan) and [Task Board](../../projects/12)
 
 ## Getting Started
 
