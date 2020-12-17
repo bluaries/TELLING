@@ -1,0 +1,12 @@
+body {background-color: rgb(228, 247, 226);}
+
+
+a {
+    color: rgb(93, 29, 243);
+    text-decoration: none;
+}
+  
+a:focus, a:hover {
+    color: #737373;
+    text-decoration: underline;
+}
