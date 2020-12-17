@@ -1,8 +1,8 @@
 [
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
       "password": "pbkdf2_sha256$216000$ZazBnxKYy8vL$8CtujRA5X/XM1V6ZC1f++0/xXmTEOmdS1u8ccJlT8Ho=",
       "last_login": "2020-12-09T08:33:22.846Z",
       "is_superuser": false,
@@ -15,7 +15,79 @@
       "date_joined": "2020-12-09T07:56:31.104Z",
       "groups": [],
       "user_permissions": []
-  }
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$ldxoANfp2ahz$Vuf3xOx9ZQTYds2Zd6pbvoltNz2lXtudpd/enunT9GA=",
+      "last_login": "2020-12-17T02:44:42.905Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "chilizhiki@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-16T13:16:42.244Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$noyaapUn5BLl$9OfLWvQlcDm1NGizGa1x+L7nyyHTog3HJdSh2mv+mCE=",
+      "last_login": "2020-12-16T21:06:50.562Z",
+      "is_superuser": false,
+      "username": "mimew",
+      "first_name": "",
+      "last_name": "",
+      "email": "arisa.pang@ku.th",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-12-16T13:30:56.323Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "!TH2FmdYCryWcocw5Ua9zJ1MvTj6lDwHzR8o4zaIl",
+      "last_login": "2020-12-17T02:19:01.512Z",
+      "is_superuser": false,
+      "username": "arisa.pang",
+      "first_name": "Arisa",
+      "last_name": "PANGPENG",
+      "email": "arisa.pang@ku.th",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-12-16T19:57:51.577Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "!vyFFXOtgHZJCviLCKml1s3EldBbLCo1to9Prgz4S",
+      "last_login": "2020-12-17T02:45:31.063Z",
+      "is_superuser": false,
+      "username": "chilizhiki",
+      "first_name": "tuesdaykidsx",
+      "last_name": "",
+      "email": "chilizhiki@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-12-17T02:16:57.978Z",
+      "groups": [],
+      "user_permissions": []
+    }
 },
 {
   "model": "TELLING.category",
@@ -46,14 +118,92 @@
   }
 },
 {
+  "model": "TELLING.category",
+  "pk": 5,
+  "fields": {
+    "category_name": "Poetry"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 6,
+  "fields": {
+    "category_name": "Fantasy"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 7,
+  "fields": {
+    "category_name": "Fanfiction"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 8,
+  "fields": {
+    "category_name": "Short Story"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 9,
+  "fields": {
+    "category_name": "Mystery"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 10,
+  "fields": {
+    "category_name": "Thriller"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 11,
+  "fields": {
+    "category_name": "History"
+  }
+},
+{
+  "model": "TELLING.category",
+  "pk": 12,
+  "fields": {
+    "category_name": "Knowledge"
+  }
+},
+{
   "model": "TELLING.story",
   "pk": 2,
   "fields": {
     "title": "Shakespeare Sonnets",
     "date_posted": "2020-12-09T08:04:53.440Z",
     "author": 1,
-    "categories": 1,
+    "categories": 5,
     "thumbnail": "image/Sonnets1609titlepage_SSJMJjc.jpg"
+  }
+},
+{
+  "model": "TELLING.story",
+  "pk": 10,
+  "fields": {
+    "title": "Processes and Threads ?",
+    "date_posted": "2020-12-17T02:46:19.655Z",
+    "author": 5,
+    "categories": 12,
+    "thumbnail": "image/1WmS5BR-QQPyo1n1AWT1zpA_jRWZOY8.jpg"
+  }
+},
+{
+  "model": "TELLING.story",
+  "pk": 11,
+  "fields": {
+    "title": "Synchronization",
+    "date_posted": "2020-12-17T02:51:26.610Z",
+    "author": 5,
+    "categories": 12,
+    "thumbnail": "image/1yXdT8DVPRSIr6OAzyIQF2A.jpg"
   }
 },
 {
@@ -99,6 +249,60 @@
     "story": 2,
     "title_chapter": "Sonnet 5 – Those hours, that with gentle work did frame",
     "content": "<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Those hours, that with gentle work did frame</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>The lovely gaze where every eye doth dwell,</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Will play the tyrants to the very same</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>And that unfair which fairly doth excel;</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>For never-resting time leads summer on</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>To hideous winter and confounds him there;</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Sap check&rsquo;d with frost and lusty leaves quite gone,</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Beauty o&rsquo;ersnow&rsquo;d and bareness every where:</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Then, were not summer&rsquo;s distillation left,</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>A liquid prisoner pent in walls of glass,</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Beauty&rsquo;s effect with beauty were bereft,</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>Nor it nor no remembrance what it was.</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 26px; padding: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; text-size-adjust: auto; text-align: center;\"><em>But flowers distill&rsquo;d, though they with winter meet,</em></p>\r\n<p class=\"pindent\" style=\"box-sizing: border-box; margin: 0px 0px 26px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; font-size: 1.2em; line-height: 1.4; caret-color: #333333; color: #333333; font-family: 'Roboto Slab', serif; font-style: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; text-align: center;\"><em>Leese but their show; their substance still lives sweet.</em></p>"
+  }
+},
+{
+  "model": "TELLING.chapter",
+  "pk": 9,
+  "fields": {
+    "story": 10,
+    "title_chapter": "OS",
+    "content": "<div class=\"content-box\" style=\"box-sizing: border-box; margin-top: 40px; margin-bottom: 40px; height: auto; background-color: #ffffff; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\">\r\n<h1 style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 0.5rem; line-height: 1.1; font-size: 2.5rem; font-family: inherit; color: inherit;\">OSคืออะไร ? เกิดขึ้นมาได้อย่างไร</h1>\r\n<p id=\"ba85\" class=\"oo op mr yk b or qe ot ou ov qf ox oy oz qg pb pc pd qh pf pg ph qi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 0.86em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\">Operating System หรือ ระบบปฏิบัติการคอมพิวเตอร์ คือระบบปฏิบัติการที่ติดตั้งขึ้นเพื่อควบคุมการทำงานของฮาร์ดแวร์รวมถึงระบบต่างๆภายในคอมพิวเตอร์ด้วยระบบปฏิบัติการเพื่อแทนที่การใช้คอมพิวเตอร์ที่ยากลำบากในอดีตซึ่งในยุคสมัยก่อนที่จะมีOSนั้นหากเราต้องการที่จะใช้งานคอมพิวเตอร์จะต้องมีความรู้ในภาษาคอมพิวเตอร์และต้องผ่านการตั้งค่าต่างๆมากมายจึงจะสามารถใช้งานคอมพิวเตอร์ได้ ในภายหลังจึงมีการพัฒนามาเป็นOSซึ่งในยุคแรกๆจะมีลักษณะที่เป็นหน้าจอชุดคำสั่งหรือที่เรียกว่า&lsquo;command line&rsquo; โดยทั้งในอดีตและปัจจุบันมีระบบปฏิบัติการให้ผู้ใช้งานเลือกใช้ได้อย่างมากมายไม่ว่าจะเป็น</p>\r\n<p id=\"03ac\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\">●&nbsp;<span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">DOS :&nbsp;</span>เป็นระบบปฏิบัติการที่มีมาในยุคแรกๆ จะมีการใช้งานในลักษณะที่ผู้ใช้จะต้องป้อนคำสั่งตัวอักษร ทำให้ผู้ที่ต้องการใช้งานจะต้องมีพื้นฐานด้านคอมพิวเตอร์พอสมควรถึงจะใช้ได้</p>\r\n<p id=\"98f2\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\"><span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">●</span>&nbsp;<span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">Unix :&nbsp;</span>เป็นระบบปฏิบัติการที่เป็นระบบเปิด ทำให้ผู้พัฒนาสามารถนำไปออกแบบเพื่อตอบสนองการใช้งานต่างๆได้อย่างหลากหลาย</p>\r\n<p id=\"c5f8\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\"><span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">● Windows :&nbsp;</span>เป็นระบบปฏิบัติการที่สร้างโดยบริษัทไมโครซอฟต์ที่ทุกคนคุ้นเคยกันเป็นอย่างดี เนื่องจากDOSมีการใช้งานที่ยากเนื่องจากมีการใช้งานที่ต้องป้อนคำสั่งทีละบรรทัด ทำให้ ไมโครซอฟต์ได้มีการพัฒนาซอฟต์แวร์ที่มีการนำGUIซึ่งเป็นรูปแบบของสัญลักษณ์ภาพกราฟิกเข้ามาแทน</p>\r\n<p id=\"de9e\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\"><span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">●</span>&nbsp;<span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">Linux :&nbsp;</span>เป็นระบบปฏิบัติการที่มีการพัฒนามาจากUnixที่เป็นระบบเปิดทำให้มีนักพัฒนาคิดค้นจนมาเป็นLinux และมีสิ่งสำคัญคือเป็นระบบปฏิบัติการฟรีที่สามารถพัฒนาระบบให้ตรงกับความต้องการที่จะใช้งานได้ง่าย</p>\r\n<p id=\"0203\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\"><span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">●</span>&nbsp;<span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">Macintosh :&nbsp;</span>เป็นระบบปฏิบัติการที่สร้างทางแอปเปิ้ลที่จะใช้งานเฉพาะในอุปกรณ์คอมพิวเตอร์ในเครือแอปเปิ้ลเท่านั้น เช่น ตระกูลmacbookต่างๆ</p>\r\n<p id=\"a950\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; word-break: break-word; line-height: 32px; letter-spacing: -0.003em;\" data-selectable-paragraph=\"\">จากที่เราได้ทำความรู้จักกับOSไปอย่างคร่าวๆแล้วคราวนี้เรามากล่าวถึงนิยามของสองตัวหลักของบทความนี้กัน ซึ่งก็คือ &lsquo;Processes และ Threads&rsquo;</p>\r\n<h6 id=\"a950\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; line-height: 32px; font-size: 21px; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; color: #292929; word-break: break-word; letter-spacing: -0.003em;\"></h6>\r\n</div>\r\n<nav style=\"box-sizing: border-box; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\" aria-label=\"breadcrumb\"></nav>"
+  }
+},
+{
+  "model": "TELLING.chapter",
+  "pk": 10,
+  "fields": {
+    "story": 10,
+    "title_chapter": "Processes",
+    "content": "<h1 id=\"b156\" class=\"pm pn mr aw ep sl pp ot yl sn ps ox ym yn pv yo yp yq py yr ys yt qb yu yv qd ci\" style=\"box-sizing: inherit; margin: 1.95em 0px -0.28em; font-weight: 500; line-height: 36px; font-size: 30px; font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #292929; text-align: center;\" data-selectable-paragraph=\"\">คำนิยามของ Processes และ Threads</h1>\r\n<p id=\"38ff\" class=\"oo op mr yk b or qe ot ou ov qf ox oy oz qg pb pc pd qh pf pg ph qi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 0.86em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">Process : โปรแกรมที่กำลังทำงานหรือประมวลผลอยู่ในขณะนั้น ซึ่งมีกระบวนการทำงานในแต่ละขั้นในระหว่างที่โปรแกรมกำลังจะถูกประมวลผลคือ &lsquo;Process State&rsquo;</p>\r\n<p id=\"47f8\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">Threads : หน่วยประมวลพื้นฐานของcpuจะประกอบไปด้วย การนับจำนวนโปรแกรม(program counter), stack, registers และ thread ID</p>\r\n<h1 id=\"d047\" class=\"pm pn mr aw ep sl pp ot yl sn ps ox ym yn pv yo yp yq py yr ys yt qb yu yv qd ci\" style=\"box-sizing: inherit; margin: 1.95em 0px -0.28em; font-weight: 500; line-height: 36px; font-size: 30px; font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #292929;\" data-selectable-paragraph=\"\">มาเริ่มกันในส่วนของProcessก่อน</h1>\r\n<p id=\"a8ce\" class=\"oo op mr yk b or qe ot ou ov qf ox oy oz qg pb pc pd qh pf pg ph qi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 0.86em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">โดยการทำงานของมันมีแนวคิดที่ว่าโปรแกรมที่กำลังประมวลผลจะต้องดำเนินไปตามลำดับที่เรียงกันไปเรื่อยๆคือ การนับจำนวนโปรแกรม, เก็บคำสั่งข้อมูลไว้ในstack และ ข้อมูล</p>"
+  }
+},
+{
+  "model": "TELLING.chapter",
+  "pk": 11,
+  "fields": {
+    "story": 10,
+    "title_chapter": "Threads",
+    "content": "<h1 id=\"f609\" class=\"pm pn mr aw ep sl pp ot yl sn ps ox ym yn pv yo yp yq py yr ys yt qb yu yv qd ci\" style=\"box-sizing: inherit; margin: 1.95em 0px -0.28em; font-weight: 500; line-height: 36px; font-size: 30px; font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #292929; text-align: center;\" data-selectable-paragraph=\"\">ในส่วนของThreads</h1>\r\n<p id=\"f610\" class=\"oo op mr yk b or qe ot ou ov qf ox oy oz qg pb pc pd qh pf pg ph qi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 0.86em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">จากที่กล่าวไว้ในคำนิยายข้างต้นคือThreadsจะประกอบไปด้วย</p>\r\n<ol class=\"\" style=\"box-sizing: inherit; margin: 0px; font-size: 16px; padding: 0px; list-style: none none; caret-color: rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">\r\n<li id=\"7ec9\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl qu qv qw ci\" style=\"box-sizing: inherit; color: #292929; line-height: 32px; letter-spacing: -0.003em; margin-bottom: -0.46em; list-style-type: decimal; margin-left: 30px; padding-left: 0px; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; margin-top: 2em;\" data-selectable-paragraph=\"\">การนับจำนวนโปรแกรม(Program Counter) : ตามชื่อของมันเลยก็คือการนับโปรแกรมเพื่อติดตามคำสั่งที่จะถูกประมวลผล</li>\r\n<li id=\"1c3a\" class=\"oo op mr yk b or qy ot ou ov qz ox oy oz ra pb pc pd rb pf pg ph rc pj pk pl qu qv qw ci\" style=\"box-sizing: inherit; color: #292929; line-height: 32px; letter-spacing: -0.003em; margin-bottom: -0.46em; list-style-type: decimal; margin-left: 30px; padding-left: 0px; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; margin-top: 1.05em;\" data-selectable-paragraph=\"\">Stack : ใช้เพื่อเก็บข้อมูลประวัติการทำงานของแต่ละprocess</li>\r\n<li id=\"4bfc\" class=\"oo op mr yk b or qy ot ou ov qz ox oy oz ra pb pc pd rb pf pg ph rc pj pk pl qu qv qw ci\" style=\"box-sizing: inherit; color: #292929; line-height: 32px; letter-spacing: -0.003em; margin-bottom: -0.46em; list-style-type: decimal; margin-left: 30px; padding-left: 0px; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; margin-top: 1.05em;\" data-selectable-paragraph=\"\">Registers : เก็บค่าcpuขณะประมวลผล</li>\r\n<li id=\"ab48\" class=\"oo op mr yk b or qy ot ou ov qz ox oy oz ra pb pc pd rb pf pg ph rc pj pk pl qu qv qw ci\" style=\"box-sizing: inherit; color: #292929; line-height: 32px; letter-spacing: -0.003em; margin-bottom: -0.46em; list-style-type: decimal; margin-left: 30px; padding-left: 0px; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; margin-top: 1.05em;\" data-selectable-paragraph=\"\">Thread ID : ใช้ระบุthreadsในprocessนั้นๆ</li>\r\n</ol>"
+  }
+},
+{
+  "model": "TELLING.chapter",
+  "pk": 12,
+  "fields": {
+    "story": 11,
+    "title_chapter": "What's?",
+    "content": "<h1 id=\"7a5f\" class=\"pm pn mr aw ep sl pp ot yl sn ps ox ym yn pv yo yp yq py yr ys yt qb yu yv qd ci\" style=\"box-sizing: inherit; margin: 1.95em 0px -0.28em; font-weight: 500; line-height: 36px; font-size: 30px; font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #292929;\" data-selectable-paragraph=\"\">Process Synchronizationคืออะไร?</h1>\r\n<p id=\"e228\" class=\"oo op mr yk b or qe ot ou ov qf ox oy oz qg pb pc pd qh pf pg ph qi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 0.86em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\"><span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">Process Synchronization หรือ การประสานงานของกระบวนการ</span></p>\r\n<p id=\"63a1\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">&mdash; คือการทำงานของprocessที่มีความเกี่ยวข้องกันไม่ว่าจะมีปัจจัยเริ่มต้นเป็นการใช้ทรัพยากรระบบร่วมกันหรืออาจจะเป็นการรอให้processหนึ่งเริ่มทำงานหลังจากอีกprocessหนึ่งทำงานเสร็จสิ้นแล้วก็ตาม ทั้งนี้ในการทำงานยังต้องอาศัยการsynchronizeที่เหมาะสมเพื่อให้มีการทำงานที่ถูกต้องซึ่งแน่นอนว่าไม่ใช่เรื่องง่ายเลยแม้ว่าจะมีแก้ปัญหาด้วยวิธีต่างๆมาแล้วเช่นTest and Set Instruction, Swap Instruction เป็นต้น</p>\r\n<p id=\"b51a\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">ซึ่งในบทความนี้เราจะทำการยกตัวอย่างการแก้ไขปัญหาที่น่าสนใจมานำเสนอ</p>\r\n<p id=\"e9da\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">● Semaphore / เซมาฟอร์</p>\r\n<p id=\"bcc6\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">จากวิธีการแก้ปัญหาทั้งหมดก็ยังไม่สะดวกที่จะช่วยแก้ไข้ปัญหาที่มีความซับซ้อนมากได้ ดังนั้นจีงได้มีวิธีใหม่ถูกคิดค้นขึ้นมานั่นก็คือเซมาฟอร์ซึ่งเซมาฟอร์เป็นอัลกอริทึมหนึ่งที่ง่ายต่อการจัดการทรัพยากรให้process หากดูตามนิยามแล้วเซมาฟอร์แทนได้ด้วย&lsquo;S&rsquo; ซึ่งจะมีค่าเป็นเลขจำนวนเต็มและมีการเรียกใช้งานได้จาก2คำสั่งคือ</p>\r\n<p id=\"c549\" class=\"oo op mr yk b or os ot ou ov ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 2em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\"><span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\"><span class=\"qx\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-style: italic;\">Signal</span></span>&nbsp;แทนด้วยVย่อมาจาก Verhogen&nbsp;<span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\">และ</span>&nbsp;<span class=\"yk ii\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-weight: bold;\"><span class=\"qx\" style=\"box-sizing: inherit; display: inline-block; transition: all 0.3s ease 0s; font-style: italic;\">Wait</span></span>&nbsp;แทนด้วยPย่อมาจาก Proberen</p>\r\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\">&nbsp;</p>"
+  }
+},
+{
+  "model": "TELLING.chapter",
+  "pk": 13,
+  "fields": {
+    "story": 11,
+    "title_chapter": "Semaphore",
+    "content": "<div class=\"content-box\" style=\"box-sizing: border-box; margin-top: 40px; margin-bottom: 40px; height: auto; background-color: #ffffff; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\">\r\n<h1 id=\"3cfe\" class=\"pm pn mr aw ep sl pp ot yl sn ps ox ym yn pv yo yp yq py yr ys yt qb yu yv qd ci\" style=\"box-sizing: inherit; margin: 1.95em 0px -0.28em; font-weight: 500; line-height: 36px; font-size: 30px; font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #292929;\" data-selectable-paragraph=\"\">Semaphoreกับการหยิบของในตะกร้า</h1>\r\n<p id=\"399b\" class=\"oo op mr yk b or qe ot ou ov qf ox oy oz qg pb pc pd qh pf pg ph qi pj pk pl hw ci\" style=\"box-sizing: inherit; margin: 0.86em 0px -0.46em; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px;\" data-selectable-paragraph=\"\">หากเปรียบเทียบโดยให้จำนวนของในตะกร้าจะแทนค่าของเซมาฟอร์ในขณะหนึ่ง การที่processต้องการทรัพยากรก็เปรียบได้กับการหยิบของออกจากตะกร้า ถ้ายังมีของที่ต้องการอยู่ processนั้นก็จะหยิบของไปหรือก็คือการที่processนั้นทำคำสั่ง p จากนั้นก็จะทำงานของตัวเองต่อไป แต่ถ้าในกรณีที่ไม่มีของที่ต้องการอยู่ในตะกร้า processนั้นจะต้องรอ(wait)ให้มีprocessอื่นใส่ของที่ต้องการลงในตะกร้าก่อนหรือก็คือการทำคำสั่ง v หรือก็คือเป็นการส่งสัญญาณ (Signal) ต่อจากนั้นเมื่อมีprocessใดก็ตามใส่ของลงไปแล้วก็ไปทำงานของตัวเองต่อไป และถ้ามีprocessไหนที่กำลังต้องการของอยู่พอดีก็จะสามารถหยิบไปใช้งานได้ แต่ถ้าไม่มีใครรอหยิบก็จะไม่ส่งผลอะไร ซึ่งในกรณีที่มีหลายprocessรอการหยิบของอยู่ก็จะต้องมีเกณฑ์เพื่อคัดสรรให้มีวิธีการหยิบของอย่างยุติธรรมที่สุดซึ่งวิธีที่ง่ายที่สุดก็คือFirst Come First Served หรือก็คือใครมาก่อนก็ได้ก่อน</p>\r\n</div>\r\n<nav style=\"box-sizing: border-box; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\" aria-label=\"breadcrumb\"></nav>"
+  }
+},
+{
+  "model": "TELLING.chapter",
+  "pk": 14,
+  "fields": {
+    "story": 11,
+    "title_chapter": "Conclusion",
+    "content": "<p style=\"text-align: center;\"><span style=\"font-family: impact, sans-serif; font-size: 24pt;\"><strong><span style=\"box-sizing: border-box; display: inline-block; text-decoration-line: underline; transition: all 0.3s ease 0s; color: #843fa1;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; display: inline-block; text-decoration-line: none; transition: all 0.3s ease 0s; caret-color: #292929; letter-spacing: -0.063px; background-color: #ffffff;\">Synchronization</span></span></span></span></strong></span></p>\r\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\"><span style=\"box-sizing: border-box; display: inline-block; transition: all 0.3s ease 0s; caret-color: #292929; color: #292929; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.063px; background-color: #ffffff;\">คือการที่processต่างๆมีการเกี่ยวข้องกันทั้งในด้านของการทำงานที่ต้องใช้ทรัพยากรในระบบร่วมกันหรือการทำงานเป็นลำดับขั้นต่อกันและในส่วนของSemaphoreเป็นวิธีการแก้ไขปัญหาอย่างหนึ่งที่ค่อนข้างน่าสนใจและมีการรับมือการจัดการจากสิ่งต่างๆที่ไม่สามารถแก้ไขได้หรือเป็นปัญหาในการแก้ไขปัญหาในวิธีอื่นๆ นอกจากนี้ผู้เขียนบทความยังทราบมาอีกว่ามีประเภทการแก้ไขปัญหาของsemaphoreที่ได้รับความนิยมในการแก้ไขปัญหาเช่น &ldquo;event counts&rdquo; and &ldquo;lock managers&rdquo;อีกด้วย</span></p>\r\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: 'Open Sans', sans-serif; font-size: 16px;\"><span style=\"box-sizing: border-box; display: inline-block; transition: all 0.3s ease 0s; caret-color: #292929; color: #292929; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.063px; background-color: #ffffff;\">ซึ่งหากผู้อ่านท่านใดสนใจที่จะศึกษาต่อก็สามารถอ่านบทความเพิ่มเติมได้</span><a class=\"co on\" style=\"box-sizing: inherit; text-decoration-line: none; display: inline-block; transition: all 0.3s ease 0s; caret-color: #292929; font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.063px;\" href=\"http://www.on-time.com/rtos-32-docs/rtkernel-32/programming-manual/module/semaphore.htm\" rel=\"noopener nofollow\"><span style=\"box-sizing: border-box; display: inline-block; transition: all 0.3s ease 0s; color: #e67e23;\">ที่</span><span style=\"box-sizing: border-box; display: inline-block; transition: all 0.3s ease 0s; color: #3598db;\"><span style=\"box-sizing: border-box; display: inline-block; transition: all 0.3s ease 0s; color: #e67e23;\">นี่</span></span></a></p>"
   }
 }
 ]

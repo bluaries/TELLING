@@ -7,16 +7,19 @@
         {% block title %}
         <title>Telling | Edit Story</title>
         {% endblock title %}
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'Story/css/style.story.edit.css' %}">
     </head>
     <body >
-        <h2>Edit story . .</h2>
+        <p></p>
+        <h2>Edit story</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ update_story_form.as_p }}
-        <button type="submit">Create</button>
+        <button type="submit" class="btn btn-info">Update</button>
         <p></p>
         <h4>Chapters</h4>
-        <a class="" href="{% url 'TELLING:create_chapter' story.id %}">Add new chapter</a>
+        <a class="fa fa-plus-circle" href="{% url 'TELLING:create_chapter' story.id %}"> Add new chapter</a>
         {% for chapter in story.chapter_set.all %}
             <li>
                 <a class="" href="{% url 'TELLING:edit_chapter' chapter.id %}">{{ chapter.title_chapter}}</a></p>

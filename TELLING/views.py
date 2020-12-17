@@ -68,7 +68,7 @@ def create_new_chapter(request, pk):
         chapter_form = ChapterForm(request.POST, user=request.user)
         if chapter_form.is_valid():
             chapter_form.save()
-            return HttpResponseRedirect(reverse('TELLING:homepage'))
+            return HttpResponseRedirect(reverse('TELLING:show_story'))
     else:
         chapter_form = ChapterForm(user=request.user)
     return render(request, 'create_chapter.html', {'chapter_form': chapter_form, 'story': add_to_story})
@@ -80,9 +80,14 @@ def edit_chapter(request, pk):
         update_chapter_form = ChapterForm(request.POST, instance=this_chap)
         if update_chapter_form.is_valid():
             this_chap.save()
-            return HttpResponseRedirect(reverse('TELLING:homepage'))
+            return HttpResponseRedirect(reverse('TELLING:show_story'))
     else:
         update_chapter_form = ChapterForm(instance=this_chap)
     return render(request, 'edit_chapter.html', {'update_chapter_form': update_chapter_form, 'chapter': this_chap})
 
+@login_required
+def del_story(request, pk):
+    select_story = Story.objects.get(pk=pk)
+    select_story.delete()
+    return render(request, 'user_story.html')
 

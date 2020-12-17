@@ -13,7 +13,7 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ chapter_form.as_p }}
-        <button type="submit">Add</button>
+        <button type="submit" class="btn btn-danger">Add</button>
     </form>
     </body>
 </html>

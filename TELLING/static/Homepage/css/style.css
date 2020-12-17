@@ -3,8 +3,33 @@
 * CUSTOM
 * =====================
 */
+body {background-color: rgb(240, 240, 240);}
 
-body {background-color: rgb(236, 236, 236);}
+.body-gradient { 
+  background: linear-gradient(64deg, #ffd39a, #fff3d2, #cabdea);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 24s ease infinite;
+  -moz-animation: AnimationName 24s ease infinite;
+  animation: AnimationName 24s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto ;
