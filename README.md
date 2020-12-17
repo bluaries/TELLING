@@ -21,6 +21,9 @@
 * [Iteration 7 Plan](../../wiki/Iteration-7-Plan) and [Task Board](../../projects/11)
 * [Iteration 8 Plan](../../wiki/Iteration-8-Plan) and [Task Board](../../projects/12)
 
+## Project Presentation
+* [Project Presentation](https://docs.google.com/presentation/d/1aMrQcTp7AEnlWQSJtxZ9aapzYXzTrRVwPMI6KEMRsD8/edit#slide=id.p)
+
 ## Getting Started
 
 For Linux or MacOS use **pip3 and python3**
