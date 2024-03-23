@@ -80,7 +80,7 @@ or
 
 GitHub                                     |           Name            |       
 -------------------------------------------|---------------------------|
-[kidstylex](https://github.com/kidstylex)  |  Arisa Pangpeng           |             
+[bluaries](https://github.com/bluaries)  |  Arisa Pangpeng           |             
 [mark47546](https://github.com/mark47546)  |  Natthaphon Rakprakobkij  |              
 [KOngTNP](https://github.com/kongtnp)      |   Tanapol Buangam         |       
 [theethaj](https://github.com/theethaj)    |  Tetach Rattanavikran     |              
